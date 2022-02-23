@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ClashApp</string>
+    <string name="txtTitleMaxLevel">Max level: </string>
 </resources>
