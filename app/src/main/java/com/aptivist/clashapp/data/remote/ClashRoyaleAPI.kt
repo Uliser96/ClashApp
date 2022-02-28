@@ -5,5 +5,5 @@ import retrofit2.http.GET
 
 interface ClashRoyaleAPI {
     @GET("cards")
-    suspend fun getAllCards(): ArrayList<AllCardsResponse>
+    suspend fun getAllCards(): AllCardsResponse
 }
