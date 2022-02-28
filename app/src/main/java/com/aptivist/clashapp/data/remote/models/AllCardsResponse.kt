@@ -4,10 +4,7 @@ import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 import kotlinx.parcelize.Parcelize
 
-@Parcelize
+
 data class AllCardsResponse(
-    @SerializedName("name") val name: String,
-    @SerializedName("id") val id: Int,
-    @SerializedName("maxLevel") val maxLevel: Int,
-    @SerializedName("iconUrls") val iconUrls: IconsUrls
-    ): Parcelable
+    @SerializedName("items") val items: ArrayList<AllCardsListResponse>
+    )

@@ -6,7 +6,7 @@ import com.aptivist.clashapp.domain.repositories.RoyalAPIRepository
 class RoyalRepositoryImpl(
     private val royalAPI: ClashRoyaleAPI
 ): RoyalAPIRepository {
-    override suspend fun fetchAllCards(): ArrayList<AllCardsResponse> {
+    override suspend fun fetchAllCards(): AllCardsResponse {
         return royalAPI.getAllCards()
     }
 }

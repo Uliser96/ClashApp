@@ -1,5 +1,6 @@
 package com.aptivist.clashapp.presentation.features
 
+import android.app.DownloadManager
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -15,19 +16,26 @@ import javax.inject.Inject
 @HiltViewModel
 class AllCardsViewModel @Inject constructor(
     private val repository: RoyalAPIRepository
-): ViewModel(){
-    private var _data = MutableLiveData<ArrayList<AllCardsResponse>>()
-    val data : LiveData<ArrayList<AllCardsResponse>> get() = _data
+) : ViewModel() {
+    private var _data = MutableLiveData<RequestViewState>()
+    val data: LiveData<RequestViewState> get() = _data
 
-    fun getAllCards(){
-        viewModelScope.launch (Dispatchers.IO){
+    fun getAllCards() {
+        viewModelScope.launch(Dispatchers.IO) {
             //Add here loading state
-            try{
-                val response = repository.fetchAllCards()
-                _data.postValue(response)
-            }catch (e: Exception){
-
+            _data.postValue(RequestViewState.Loading(true))
+            try {
+                //Here we can map to domain if necessary
+                val result = repository.fetchAllCards()
+                _data.postValue(RequestViewState.Success(result))
+                _data.postValue(RequestViewState.Loading(false))
+            } catch (e: Exception) {
+                _data.postValue(RequestViewState.Error(e.message!!))
             }
         }
+    }
+
+    fun resetData() {
+        _data.postValue(null)
     }
 }
