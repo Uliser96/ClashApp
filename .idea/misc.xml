@@ -3,8 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Ulises/Documents/AndroidProjects/ClashApp/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Ulises/Documents/AndroidProjects/ClashApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/Ulises/Documents/AndroidProjects/ClashApp/app/src/main/res/layout/card_row.xml" value="0.35260416666666666" />
+        <entry key="..\:/Users/Ulises/Documents/AndroidProjects/ClashApp/app/src/main/res/layout/fragment_all_cards.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Ulises/Documents/AndroidProjects/ClashApp/app/src/main/res/layout/fragment_profile.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Ulises/Documents/AndroidProjects/ClashApp/app/src/main/res/layout/fragment_profile_detail.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Ulises/Documents/AndroidProjects/ClashApp/app/src/main/res/layout/fragment_profile_home.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Ulises/Documents/AndroidProjects/ClashApp/app/src/main/res/menu/main_nav.xml" value="0.264" />
       </map>
     </option>
   </component>

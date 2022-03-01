@@ -1,11 +1,9 @@
-package com.aptivist.clashapp.presentation.features
+package com.aptivist.clashapp.presentation.features.allcards
 
-import android.app.DownloadManager
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.aptivist.clashapp.data.remote.models.AllCardsResponse
 import com.aptivist.clashapp.domain.repositories.RoyalAPIRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers

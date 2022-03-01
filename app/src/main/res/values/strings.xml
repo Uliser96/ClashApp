@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">ClashApp</string>
     <string name="txtTitleMaxLevel">Max level: </string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txtTitleProfile">Profile</string>
+    <string name="txtTitleCardsList">All cards</string>
+    <string name="txtTitleSettings">Settings</string>
+    <string name="txtBtnSubmit">Submit</string>
+    <string name="hntEdtPlayerTag">Introduce player tag without #</string>
 </resources>

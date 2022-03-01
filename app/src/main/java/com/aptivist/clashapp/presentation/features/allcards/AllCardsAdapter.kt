@@ -1,4 +1,4 @@
-package com.aptivist.clashapp.presentation.features
+package com.aptivist.clashapp.presentation.features.allcards
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -10,7 +10,9 @@ import com.squareup.picasso.Picasso
 
 class AllCardsAdapter(
     private val onWeatherClicked: ((AllCardsListResponse) -> Unit)
-) : androidx.recyclerview.widget.ListAdapter<AllCardsListResponse, AllCardsAdapter.AllCardsViewHolder>(WeatherDiff()) {
+) : androidx.recyclerview.widget.ListAdapter<AllCardsListResponse, AllCardsAdapter.AllCardsViewHolder>(
+    WeatherDiff()
+) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AllCardsViewHolder =
         AllCardsViewHolder(
