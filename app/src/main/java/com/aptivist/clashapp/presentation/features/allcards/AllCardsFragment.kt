@@ -41,7 +41,6 @@ class AllCardsFragment : Fragment() {
                 is RequestViewState.Success -> {
                     adapter.submitList(result.data.items.toList())
                     binding.rcyCards.adapter = adapter
-                    Log.i("event", "Success")
                 }
                 is RequestViewState.Error -> {
                     Toast.makeText(
@@ -49,16 +48,6 @@ class AllCardsFragment : Fragment() {
                         result.message,
                         Toast.LENGTH_SHORT
                     ).show()
-                    Log.i("event", "Error")
-                }
-                is RequestViewState.Loading -> {
-                    if (result.isLoading){
-                        Log.i("event", "Loading")
-                        binding.PgrBar.visibility = View.VISIBLE
-                    }else{
-                        Log.i("event", "Stop loading")
-                        binding.PgrBar.visibility = View.GONE
-                    }
                 }
             }
         }
