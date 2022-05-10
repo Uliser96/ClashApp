@@ -51,15 +51,6 @@ class AllCardsFragment : Fragment() {
                     ).show()
                     Log.i("event", "Error")
                 }
-                is RequestViewState.Loading -> {
-                    if (result.isLoading){
-                        Log.i("event", "Loading")
-                        binding.PgrBar.visibility = View.VISIBLE
-                    }else{
-                        Log.i("event", "Stop loading")
-                        binding.PgrBar.visibility = View.GONE
-                    }
-                }
             }
         }
         viewModel.getAllCards()
