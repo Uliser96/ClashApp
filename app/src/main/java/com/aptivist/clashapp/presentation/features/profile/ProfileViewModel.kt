@@ -23,14 +23,14 @@ class ProfileViewModel @Inject constructor(
     fun getPlayerProfile(tag: String){
         viewModelScope.launch(Dispatchers.IO) {
             //Add here loading state
-            _data.postValue(ProfileViewState.Loading(true))
+            //_data.postValue(ProfileViewState.Loading(true))
             try {
                 //Here we can map to domain if necessary
                 val result = repository.fetchPlayerInfo(tag)
                 _data.postValue(ProfileViewState.Success(result))
-                _data.postValue(ProfileViewState.Loading(false))
+                //_data.postValue(ProfileViewState.Loading(false))
             } catch (e: Exception) {
-                _data.postValue(ProfileViewState.Loading(false))
+                //_data.postValue(ProfileViewState.Loading(false))
                 _data.postValue(ProfileViewState.Error(e.message!!))
             }
         }
