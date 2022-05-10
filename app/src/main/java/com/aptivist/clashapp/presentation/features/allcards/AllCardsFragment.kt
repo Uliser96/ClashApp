@@ -41,6 +41,7 @@ class AllCardsFragment : Fragment() {
                 is RequestViewState.Success -> {
                     adapter.submitList(result.data.items.toList())
                     binding.rcyCards.adapter = adapter
+                    Log.i("event", "Success")
                 }
                 is RequestViewState.Error -> {
                     Toast.makeText(
@@ -48,6 +49,7 @@ class AllCardsFragment : Fragment() {
                         result.message,
                         Toast.LENGTH_SHORT
                     ).show()
+                    Log.i("event", "Error")
                 }
             }
         }
